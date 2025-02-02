@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alessandro Zacco - DevOps Engineer</title>
+    
+    <!-- Favicon dinamico -->
+    <script>
+        function generateFavicon() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 32;
+            canvas.height = 32;
+            const ctx = canvas.getContext('2d');
+
+            // Sfondo nero
+            ctx.fillStyle = '#1A1A1A';
+            ctx.fillRect(0, 0, 32, 32);
+
+            // Testo "AZ" in giallo
+            ctx.fillStyle = '#E9FF4B';
+            ctx.font = 'bold 20px "Plus Jakarta Sans", sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('AZ', 16, 16);
+
+            // Crea il link del favicon
+            const favicon = document.createElement('link');
+            favicon.rel = 'icon';
+            favicon.type = 'image/png';
+            favicon.href = canvas.toDataURL('image/png');
+            
+            // Rimuovi eventuali favicon esistenti
+            const existingFavicon = document.querySelector('link[rel="icon"]');
+            if (existingFavicon) {
+                document.head.removeChild(existingFavicon);
+            }
+            
+            document.head.appendChild(favicon);
+        }
+
+        // Genera il favicon quando il font è caricato
+        document.fonts.ready.then(generateFavicon);
+    </script>
+    
+    
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Analytics -->
+    <script>
+        // Verifica se i cookie analitici sono stati accettati
+        if (localStorage.getItem('analytics-cookies') === 'true') {
+            // Google tag (gtag.js)
+            const gtagScript = document.createElement('script');
+            gtagScript.async = true;
+            gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-N5YVB6Z0KC';
+            document.head.appendChild(gtagScript);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-N5YVB6Z0KC');
+        }
+    </script>
+    
+   
+    
+    <!-- Script di accessibilità -->
+    <script>
+        window.interdeal = {
+            "sitekey": "8378f3d4eec22c5bf09ae8a5b41c1dd2",
+            "Position": "left",
+            "domains": {
+                "js": "https://cdn.equalweb.com/",
+                "acc": "https://access.equalweb.com/"
+            },
+            "Menulang": "IT",
+            "btnStyle": {
+                "vPosition": ["80%", "20%"],
+                "scale": ["0.5", "0.5"],
+                "color": {
+                    "main": "#1c4bb6",
+                    "second": "#ffffff"
+                },
+                "icon": {
+                    "outline": true,
+                    "type": 1,
+                    "shape": "circle"
+                }
+            }
+        };
+        (function(doc, head, body){
+            var coreCall = doc.createElement('script');
+            coreCall.src = interdeal.domains.js + 'core/5.0.10/accessibility.js';
+            coreCall.defer = true;
+            coreCall.integrity = 'sha512-gKQdQe59Hw864B9Pbxo+0aPeJJQdKODsfg0Vwf+zIQcRS7uR+kd3oEX3ClAdDERLQbO5LmliXmzjNjrxkP5wgA==';
+            coreCall.crossOrigin = 'anonymous';
+            coreCall.setAttribute('data-cfasync', true );
+            body? body.appendChild(coreCall) : head.appendChild(coreCall);
+        })(document, document.head, document.body);
+    </script>
+</head>
+<body>
+    <button id="back-to-top" title="Torna su">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">AZ</span>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="#chi-sono">Chi Sono</a>
+                <a href="#competenze">Competenze</a>
+                <a href="#esperienze">Esperienze</a>
+                <a href="#progetti">Progetti</a>
+                <a href="#certificazioni">Certificazioni</a>
+                <a href="#contatti" class="nav-cta">Contattami</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero-title">
+            DevOps Engineer & <span class="highlight">Quality Assurance</span> Specialist
+        </h1>
+        <p class="hero-subtitle">
+            Automazione, Cloud Infrastructure e Testing per soluzioni software affidabili
+        </p>
+    </section>
+
+    <section id="chi-sono">
+        <div class="container">
+            <h2>Chi Sono</h2>
+            <div class="about-content">
+                <div class="about-header">
+                    <img src="https://res.cloudinary.com/dt28ce44n/image/upload/f_auto/q_auto/c_auto,g_auto,h_800,w_800/v1/my/gubgejwrztqcz5stngzu" 
+                         alt="Alessandro Zacco" 
+                         class="profile-image">
+                </div>
+                <div class="about-text">
+                    <p>
+                        Sono uno studente di Ingegneria Informatica, lavoro nel settore IT dal 2018, ho sviluppato una solida expertise nelle aree di DevOps, cloud computing e amministrazione dei sistemi. Nonostante abbia intrapreso il mio percorso accademico solo da un paio d'anni, la mia carriera professionale mi ha permesso di acquisire competenze avanzate nell'ottimizzazione dei processi e nella gestione delle infrastrutture tecnologiche.
+                    </p>
+                    <p>
+                        Nell'ultimo anno, ho ampliato la mia specializzazione orientandomi verso il Quality Assurance (QA), un ambito che mi consente di garantire non solo efficienza nei deployment, ma anche soluzioni stabili e sicure, con un forte focus sulla qualità e sull'affidabilità dei sistemi.
+                    </p>
+                    <p>
+                        Attualmente lavoro come DevOps Expert Engineer presso SORINTI.lab, dove mi occupo di:
+                    </p>
+                    <ul>
+                        <li>Implementazione e gestione di soluzioni APM con Dynatrace</li>
+                        <li>Automazione dei processi di deployment e testing</li>
+                        <li>Ottimizzazione delle performance applicative</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competenze">
+        <div class="container">
+            <h2>Competenze</h2>
+            <div class="skills-grid">
+                <div class="skill-card" onclick="openSkillsModal('devops')">
+                    <i class="fas fa-cloud"></i>
+                    <h3>DevOps & Cloud</h3>
+                    <p>Automazione, CI/CD, Cloud Infrastructure</p>
+                </div>
+                <div class="skill-card" onclick="openSkillsModal('development')">
+                    <i class="fas fa-code"></i>
+                    <h3>Development</h3>
+                    <p>Vedi competenze</p>
+                </div>
+                <div class="skill-card" onclick="openSkillsModal('testing')">
+                    <i class="fas fa-vial"></i>
+                    <h3>Testing & QA</h3>
+                    <p>Vedi competenze</p>
+                </div>
+                <div class="skill-card" onclick="openSkillsModal('monitoring')">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Monitoring</h3>
+                    <p>Vedi competenze</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="esperienze">
+        <div class="container">
+            <h2>Esperienze Professionali</h2>
+            <div class="experiences-grid">
+                <!-- Le esperienze verranno popolate da JavaScript -->
+            </div>
+            <div class="view-more-container">
+                <button class="view-more-btn" onclick="openExperiencesModal()">
+                    Visualizza tutte le esperienze
+                    <span class="btn-icon">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="progetti">
+        <div class="container">
+            <h2>Progetti</h2>
+            <div class="projects-grid">
+                <!-- I progetti verranno popolati da JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="certificazioni">
+        <div class="container">
+            <h2>Certificazioni</h2>
+            <div class="certifications-grid">
+                <!-- Le certificazioni verranno popolate da JavaScript -->
+            </div>
+            <div class="view-more-container">
+                <button class="view-more-btn" onclick="openCertificationsModal()">
+                    Visualizza tutte le certificazioni
+                    <span class="btn-icon">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti">
+        <div class="container">
+            <h2>Contatti</h2>
+            <div class="contact-info">
+                <a href="mailto:info@alessandro.zacco.com?subject=Richiesta%20di%20Contatto%20-%20Portfolio&body=Ciao%20Alessandro%2C%0A%0AHo%20visitato%20il%20tuo%20portfolio%20e%20vorrei%20mettermi%20in%20contatto%20con%20te." class="contact-link">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="https://www.linkedin.com/in/alessandro-zacco-5a99a1182/" class="contact-link" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/zazzale" class="contact-link" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Alessandro Zacco. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+    <!-- Modali -->
+    <div id="skills-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Chiudi modale">&times;</button>
+            <h2 id="modal-title"></h2>
+            <div id="modal-skills"></div>
+        </div>
+    </div>
+
+    <div id="experiences-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Chiudi modale">&times;</button>
+            <h2>Tutte le Esperienze</h2>
+            <div id="modal-experiences"></div>
+        </div>
+    </div>
+
+    <div id="certifications-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Chiudi modale">&times;</button>
+            <h2>Tutte le Certificazioni</h2>
+            <div id="modal-certifications"></div>
+        </div>
+    </div>
+
+    <div id="gdpr-button" class="gdpr-button" onclick="openGdprModal()">
+        <i class="fas fa-shield-alt"></i>
+    </div>
+
+    <div id="gdpr-modal" class="modal">
+        <div class="modal-content gdpr-content">
+            <button class="close-modal" aria-label="Chiudi modale">&times;</button>
+            <h2>Impostazioni Privacy</h2>
+            <div class="gdpr-settings">
+                <div class="gdpr-section">
+                    <h3>Cookie Necessari</h3>
+                    <p>Questi cookie sono necessari per il funzionamento del sito e non possono essere disattivati.</p>
+                    <label class="switch">
+                        <input type="checkbox" checked disabled>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="gdpr-section">
+                    <h3>Cookie Analitici</h3>
+                    <p>Ci aiutano a capire come gli utenti interagiscono con il sito.</p>
+                    <label class="switch">
+                        <input type="checkbox" id="analytics-cookies">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="gdpr-section">
+                    <h3>Cookie Marketing</h3>
+                    <p>Utilizzati per mostrare pubblicità pertinente.</p>
+                    <label class="switch">
+                        <input type="checkbox" id="marketing-cookies">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="gdpr-actions">
+                <button class="gdpr-button-secondary" onclick="rejectAllCookies()">Rifiuta Tutto</button>
+                <button class="gdpr-button-primary" onclick="acceptAllCookies()">Accetta Tutto</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
